@@ -22,7 +22,7 @@
         // Turn off the spinner
         $('.spinner').fadeOut('fast');
         // Set the timestamp
-        $('.timestamp').find('span').html(moment(new Date().getTime()).format('h:m a'));
+        $('.timestamp').find('span').html(moment(new Date().getTime()).format('h:mm a'));
       },
 
       // Handles the sending of the code to the eval server
@@ -108,7 +108,7 @@
   $(window).unload(saveCode);
 
   $(document).keydown(function (e) {
-    if (e.which === 229) {
+    if (e.which === 229 || e.which === 67) {
       triggerBackspace();
       return false;
     }
