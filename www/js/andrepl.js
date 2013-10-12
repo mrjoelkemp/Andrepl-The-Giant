@@ -87,6 +87,16 @@
     autoCloseBrackets: true
   });
 
+  var editor2 = window.CodeMirror.fromTextArea($('textarea.test')[0], {
+    lineNumbers: true,
+    matchBrackets: true,
+    mode: 'javascript',
+    indentUnit: 2,
+    tabSize: 2,
+    autofocus: true,
+    autoCloseBrackets: true
+  });
+
   // Override console to show the output in our console
   window.console = {
     log: setOutput
