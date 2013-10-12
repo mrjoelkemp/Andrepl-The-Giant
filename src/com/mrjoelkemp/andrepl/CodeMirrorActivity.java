@@ -4,13 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.webkit.ConsoleMessage;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.Toast;
 
 @SuppressLint("SetJavaScriptEnabled")
 public class CodeMirrorActivity extends Activity {

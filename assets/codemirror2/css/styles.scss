@@ -58,10 +58,9 @@ body {
       margin: 0 auto;
       #editor { 
         font-size: 17px;
-        border: 1px solid black;
         margin-bottom: 10px;
         .CodeMirror {
-          min-height: 380px;
+          min-height: 400px;
         }
       }
 
@@ -87,7 +86,7 @@ body {
             height: 26%;
             background: #000;
             position: absolute;
-            left: 44.5%;
+            left: 43.5%;
             top: 37%;
             opacity: 0;
             -webkit-animation: fade 1s linear infinite;
@@ -149,7 +148,7 @@ body {
     }
     button {
       width: 150px;
-      height: 40px;
+      height: 30px;
       cursor: pointer;
       border-radius: 7px;
       @include border-radius(10px);

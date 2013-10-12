@@ -46,7 +46,7 @@
 		    }
 		  };
 
-  // Set up the editor
+  // Set up the editor  
   editor = window.CodeMirror.fromTextArea(document.getElementById('code'), {
     lineNumbers: true,
     matchBrackets: true,
@@ -56,7 +56,7 @@
     autofocus: true,
     autoCloseBrackets: true
   });
-
+  
   // Override console to show the output in our console
   window.console = {
     log: setOutput

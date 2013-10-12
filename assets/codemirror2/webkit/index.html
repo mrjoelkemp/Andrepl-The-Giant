@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../theme/night.css">
 	<link rel="stylesheet" href="../theme/cobalt.css">
 	<link rel="stylesheet" href="../theme/eclipse.css">
+	<link rel="stylesheet" href="../addon/hint/show-hint.css">
 	<link rel="stylesheet" href="../css/styles.css">
     <title>Andrepl: The JavaScript REPL</title>
     <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
@@ -17,6 +18,9 @@
   </head>
   <body>
     <div class="container">
+    	<div class="submit" style="text-align: right;">
+        <button style="height: 25px; width: 50px; font-size: 15px;">RUN</button>
+      </div>
       <div class="codebox">
         <div class="codebox-cont">
         	<textarea id="code" name="code">console.log('andrepl');</textarea>
@@ -44,9 +48,6 @@
           </div>
         </div>
       </div>
-      <div class="submit">
-        <button>RUN</button>
-      </div>
       <div class="credits">
         <span>Send feedback to <a href="http://www.twitter.com/mrjoelkemp">@mrjoelkemp</a></span>
       </div>
@@ -55,6 +56,8 @@
       <a href="http://mixpanel.com/f/partner" style="display:none"><img alt="Real Time Web Analytics" src="http://mixpanel.com/site_media/images/partner/badge_blue.png" /></a>
     </div>
 	<script src="../lib/codemirror.js"></script>
+	<script src="../addon/hint/show-hint.js"></script>
+	<script src="../addon/hint/javascript-hint.js"></script>
 	<script src="../mode/javascript/javascript.js"></script>
 	<script src="../lib/jquery-1.10.2.min.js"></script>
 	<script src="../lib/moment/moment.min.js"></script>
