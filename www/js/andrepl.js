@@ -45,6 +45,11 @@
           setOutput(e, true);
           mixpanel.track('Error', {'error' : e});
         }
+      },
+
+      // Android backspace emits the wrong keycode
+      triggerBackspace = function () {
+        editor.setValue(editor.getValue().slice(0, -1));
       };
 
   // Local storage helpers
@@ -101,5 +106,12 @@
 
   // Remember the code in the editor before navigating away
   $(window).unload(saveCode);
+
+  $(document).keydown(function (e) {
+    if (e.which === 229) {
+      triggerBackspace();
+      return false;
+    }
+  });
 
 })(window.$, window.moment);
