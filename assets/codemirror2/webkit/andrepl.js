@@ -23,29 +23,28 @@
         $('.spinner').fadeOut('fast');
         // Set the timestamp
         $('.timestamp').find('span').html(moment(new Date().getTime()).format('h:mm a'));
-      };
-  
-  // Needs to be exposed for the android runnable
-  window.processCode = function () {
-        var code = editor.getValue();
-
-        if (! code.length) {
-          setOutput('Please supply some code...');
-          return;
-        }
-
-        $('.spinner').fadeIn('fast');
-
-        // Track it
-        mixpanel.track('Code Run', {'code': code});
-
-        try {
-          eval(code);
-        } catch (e) {
-          setOutput(e, true);
-          mixpanel.track('Error', {'error' : e});
-        }
-      }
+      },
+      
+	  	processCode = function () {
+		    var code = editor.getValue();
+		
+		    if (! code.length) {
+		      setOutput('Please supply some code...');
+		      return;
+		    }
+		
+		    $('.spinner').fadeIn('fast');
+		
+		    // Track it
+		    mixpanel.track('Code Run', {'code': code});
+		
+		    try {
+		      eval(code);
+		    } catch (e) {
+		      setOutput(e, true);
+		      mixpanel.track('Error', {'error' : e});
+		    }
+		  };
 
   // Set up the editor
   editor = window.CodeMirror.fromTextArea(document.getElementById('code'), {
@@ -62,7 +61,6 @@
   window.console = {
     log: setOutput
   };
-
 
   $('.submit button').click(processCode);
 
