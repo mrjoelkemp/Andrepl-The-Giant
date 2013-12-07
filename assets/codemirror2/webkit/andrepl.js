@@ -43,7 +43,7 @@
 		    mixpanel.track('Code Run', {'code': code});
 		
 		    try {
-		      eval(code);
+		      eval.call(window, code);
 		    } catch (e) {
 		      setOutput(e, true);
 		      mixpanel.track('Error', {'error' : e});
