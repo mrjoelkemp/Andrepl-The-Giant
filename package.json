@@ -1,0 +1,15 @@
+{
+  "name": "Andrepl",
+  "version": "1.1.0",
+  "author": "Mr. Joel Kemp @mrjoelkemp <joel@mrjoelkemp.com>",
+  "url": "https://github.com/mrjoelkemp/Andrepl-The-Giant", 
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-sass": "~0.5.0",
+	  "load-grunt-tasks": "~0.2.0"
+  },
+  "engines": {
+    "node": "~0.10"
+  }
+}
