@@ -25,6 +25,10 @@
         $('.timestamp').find('span').html(moment(new Date().getTime()).format('h:mm a'));
       },
       
+      clearCode = function () {
+      	editor.setValue('');
+      },
+      
 	  	processCode = function () {
 		    var code = editor.getValue();
 		
@@ -62,6 +66,6 @@
     log: setOutput
   };
 
-  $('.submit button').click(processCode);
-
+  $('button.submit').click(processCode);
+  $('button.clear').click(clearCode);
 })(window.$, window.moment);
